@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icon.png" />
+    <title>Graphql</title>
+    <style>
+        body{
+            min-width: 620px;
+            background-color: black;
+            background-attachment: fixed;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            margin: auto;
+            color: #00BB00;
+            border-color: #222222;
+            border-width: 4px;
+            border-style: solid;
+            background-color: #111111;
+        }
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        .childbig{
+            display: flex;
+            flex: 1 0 21%;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            margin: 0px;
+            background-color: rgba(50, 50, 50, 0.3);
+            /* border-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 10; */
+            border-color: #222222;
+            border-width: 4px;
+            border-style: solid;
+        }
+        .child {
+            overflow: hidden;
+            display: flex;
+            flex: 1 0 21%;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin: 0px;
+            background-color: rgba(50, 50, 50, 0.3);
+            /* border-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 10; */
+            border-color: #222222;
+            border-width: 4px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h1>Basic ID</h1>
+    <div class="parent">
+        <h1 class="child">Username</h1>
+        <h1 class="child" id="userName"></h1>
+    </div>
+    <div class="parent">
+        <h1 class="child">ID</h1>
+        <h1 class="child" id="userID">ID</h1>
+    </div>
+    <h1>Level</h1>
+    <div class="parent">
+        <h1 class="child">Level</h1>
+        <h1 class="child" id="level">0</h1>
+    </div>
+    <h1>XP</h1>
+    <div class="parent">
+        <h1 class="child">Total XP</h1>
+        <h1 class="child" id="xp">0</h1>
+    </div>
+    <h1>Statistics</h1>
+    <div class="parent">
+        <h1  class="childbig">Audit Ratio</h1>
+        <div class="childbig" id="auditRatio"></div>
+    </div> 
+    <div class="parent">
+        <h1  class="childbig">XP Over Time</h1>
+        <div id="xpOverTime" class="childbig"></div>
+    </div> 
+    <div class="parent">
+        <h1  class="childbig">Level Over Time</h1>
+        <div class="childbig" id="levelOverTime"></div>
+    </div> 
+<script src="main.js"></script>
+</body>
+</html>
