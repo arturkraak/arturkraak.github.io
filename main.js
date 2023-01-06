@@ -128,6 +128,7 @@ function getAuditUp() {
                 }, "200")
             } else {
                 drawAuditRatioGraph()
+                document.getElementById("auditUp").innerText =  Math.round(auditUp)
             }
         })
 }
@@ -160,6 +161,7 @@ function getAuditDown() {
                 }, "200")
             } else {
                 drawAuditRatioGraph()
+                document.getElementById("auditDown").innerText = Math.round(auditDown)
             }
         })
 }
