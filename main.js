@@ -26,7 +26,7 @@ fetch('https://01.kood.tech/api/graphql-engine/v1/graphql', {
         body: JSON.stringify({
             query: `
     {
-      transaction{
+      transaction(order_by: {createdAt: asc}){
         userId
       }
     }
@@ -48,7 +48,7 @@ fetch('https://01.kood.tech/api/graphql-engine/v1/graphql', {
         body: JSON.stringify({
             query: `
     {
-      transaction{
+      transaction(order_by: {createdAt: asc}){
         user{
           login
         }
